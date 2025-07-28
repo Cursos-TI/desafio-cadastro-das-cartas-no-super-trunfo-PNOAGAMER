@@ -23,7 +23,7 @@ int main() {
     printf(":Cadastro das cidades: \nInsira as informações da primeira cidade a seguir. \n");
 
     printf("Insira o Estado da primeira cidade: \n");
-    scanf("%s", &estado1);
+    scanf(" %[^\n]", &estado1);
 
     printf("Agora insira o Código da primeira cidade \n");
     scanf("%s", &codigo1);
@@ -48,7 +48,7 @@ int main() {
     printf(" Muito bem, agora defina os dados da segunda cidade a seguir!\n");  // Aqui começam a ser definidos os dados da segunda carta
 
     printf("Insira o Estado da segunda cidade: \n");
-    scanf("%s", &estado2);
+    scanf(" %[^\n]", &estado2);
 
     printf("Agora insira o Código da segunda cidade: \n");
     scanf("%s", &codigo2);
