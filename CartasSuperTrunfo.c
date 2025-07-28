@@ -26,7 +26,7 @@ int main() {
     scanf(" %[^\n]", estado1);
 
     printf("Agora insira o Código da primeira cidade \n");
-    scanf("%s", &codigo1);
+    scanf("%s", codigo1);
 
     printf("Insira o nome da primeira cidade: \n");
     scanf(" %[^\n]", nome1);                    
@@ -35,13 +35,13 @@ int main() {
     scanf("%lu", &populacao1);
 
     printf("Agora insira a Área (KM²) da primeira cidade: \n");
-    scanf("%f", &area1);
+    scanf("%f", area1);
 
     printf("Agora insira o PIB da primeira cidade: \n");
-    scanf("%f", &pib1);
+    scanf("%f", pib1);
 
     printf("Agora, para finalizar, digite o número de Pontos Turísticos da primeira cidade: \n");
-    scanf("%d", &Pturisticos1);
+    scanf("%d", Pturisticos1);
 
     /*Analise das informações da segunda carta*/
 
@@ -51,7 +51,7 @@ int main() {
     scanf(" %[^\n]", estado2);
 
     printf("Agora insira o Código da segunda cidade: \n");
-    scanf("%s", &codigo2);
+    scanf("%s", codigo2);
 
     printf("Agora insira o nome da segunda cidade: \n");
     scanf(" %[^\n]", nome2);
@@ -60,13 +60,13 @@ int main() {
     scanf("%lu", &populacao2);
 
     printf("Agora insira a Área (KM²) da segunda cidade: \n");
-    scanf("%f", &area2);
+    scanf("%f", area2);
 
     printf("Agora insira o PIB da segunda cidade: \n");
-    scanf("%f", &pib2);
+    scanf("%f", pib2);
 
     printf("Agora, para finalizar, digite o número de Pontos Turísticos da segunda cidade: \n");
-    scanf("%d", &Pturisticos2);
+    scanf("%d", Pturisticos2);
 
     printf("--------------------------------------------------------- \n \n"); //Deixa a exibição mais legível.
 
@@ -79,7 +79,7 @@ int main() {
     printf("Código: %s \n", codigo1);                                //Exibe o Código da primeira carta.
     printf("Nome da cidade: %s \n", nome1);                   //Exibe o nome definido para a primeira carta.
     printf("Populacão: %lu \n", populacao1);                  //Exibe o número populacional definido para a primeira carta.
-    printf("Área : %f KM² \n", area1);                        //Exibe a área definida para a primeira carta.
+    printf("Área : %.2f KM² \n", area1);                        //Exibe a área definida para a primeira carta.
     printf("PIB: R$ %.2f \n", pib1);                           //Exibe o PIB definido para a primeira carta.
     printf("Pontos Turísticos: %d \n", Pturisticos1);        //Exibe o número de pontos turísticos definido para a primeira carta.
     printf("Carta 2: \n \n");                                   //Exibe o cabeçalho da tela de visualização da segunda carta.
@@ -87,7 +87,7 @@ int main() {
     printf("Código: %s \n", codigo2);                                //Exibe o Código da segunda carta.
     printf("Nome da cidade: %s \n", nome2);                   //Exibe o nome definido para a segunda carta.
     printf("Populacão: %lu \n", populacao2);                  //Exibe o número populacional definido para a segunda carta.
-    printf("Área : %f KM² \n", area2);                         //Exibe a área definida para a segunda carta.
+    printf("Área : %.2f KM² \n", area2);                         //Exibe a área definida para a segunda carta.
     printf("PIB: R$ %.2f \n", pib2);                            //Exibe o PIB definido para a segunda carta.
     printf("Pontos Turísticos: %d \n", Pturisticos2);         //Exibe o número de pontos turísticos definido para a segunda carta.
     
