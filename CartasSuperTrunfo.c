@@ -82,8 +82,6 @@ int main() {
     printf("Área : %f KM² \n", area1);                        //Exibe a área definida para a primeira carta.
     printf("PIB: R$ %.2f \n", pib1);                           //Exibe o PIB definido para a primeira carta.
     printf("Pontos Turísticos: %d \n", Pturisticos1);        //Exibe o número de pontos turísticos definido para a primeira carta.
-    printf("Densidade Populacional: %.2f hab/KM² \n", Dpopulacional1); //Exibe a Densidade Populacional calculada da primeira carta.
-    printf("PIB per Capita: R$ %.2f \n \n", PIBperC1);           //Exibe o PIB per Capita calculado da primeira carta.
     printf("Carta 2: \n \n");                                   //Exibe o cabeçalho da tela de visualização da segunda carta.
     printf("Estado: %s \n", estado2);                                   //Exibe o estado da cidade.
     printf("Código: %s \n", codigo2);                                //Exibe o Código da segunda carta.
@@ -92,8 +90,6 @@ int main() {
     printf("Área : %f KM² \n", area2);                         //Exibe a área definida para a segunda carta.
     printf("PIB: R$ %.2f \n", pib2);                            //Exibe o PIB definido para a segunda carta.
     printf("Pontos Turísticos: %d \n", Pturisticos2);         //Exibe o número de pontos turísticos definido para a segunda carta.
-    printf("Densidade Populacional: %.2f hab/KM² \n", Dpopulacional2); //Exibe a Densidade Populacional calculada da segunda carta.
-    printf("PIB per Capita: R$ %.2f \n \n", PIBperC2);                //Exibe o PIB per Capita calculado da segunda carta.
-
+    
     return 0;
 }
