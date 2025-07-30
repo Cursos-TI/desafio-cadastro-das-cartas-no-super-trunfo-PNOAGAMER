@@ -165,9 +165,9 @@ int main() {
     }
 
     if (PIBperC1 > PIBperC2){
-        printf("PIB per Capita: Cidade 1 venceu");
+        printf("PIB per Capita: Cidade 1 venceu\n\n");
     }else{
-        printf("PIB per Capita: Cidade 2 venceu");
+        printf("PIB per Capita: Cidade 2 venceu\n\n");
     }
 
     printf("Agora vamos ver qual das duas cidades é a mais poderosa:\n\n");
