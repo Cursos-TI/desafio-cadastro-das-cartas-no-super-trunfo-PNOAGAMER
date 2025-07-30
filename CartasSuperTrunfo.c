@@ -26,7 +26,7 @@ int main() {
     scanf(" %[^\n]", estado1);
 
     printf("Agora insira o Código da primeira cidade \n");
-    scanf("%s", &codigo1);
+    scanf("%s", codigo1);
 
     printf("Insira o nome da primeira cidade: \n");
     scanf(" %[^\n]", nome1);                    
@@ -51,7 +51,7 @@ int main() {
     scanf(" %[^\n]", estado2);
 
     printf("Agora insira o Código da segunda cidade: \n");
-    scanf("%s", &codigo2);
+    scanf("%s", codigo2);
 
     printf("Agora insira o nome da segunda cidade: \n");
     scanf(" %[^\n]", nome2);
@@ -85,8 +85,6 @@ int main() {
         printf("⚠️ Atenção: População da Carta 1 é zero! PIB per Capita definido como 0. \\n");
     }
 
-    PIBperC1 = pib1 / populacao1;
-
     /*Segunda Carta*/
 
     if (area2 > 0){
@@ -101,8 +99,6 @@ int main() {
         PIBperC2 = 0.0f;
         printf("⚠️ Atenção: População da Carta 2 é zero! PIB per Capita definido como 0. \\n");
     }
-
-    PIBperC2 = pib2 / populacao2;
 
     printf("--------------------------------------------------------- \n \n"); //Deixa a exibição mais legível.
 
