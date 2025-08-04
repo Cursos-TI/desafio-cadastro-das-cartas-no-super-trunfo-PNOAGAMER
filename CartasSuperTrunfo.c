@@ -11,7 +11,7 @@ int main() {
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
     int Pturisticos1, Pturisticos2;
-    float area1, pib1, area2, pib2, Dpopulacional1, Dpopulacional2, PIBperC1, PIBperC2, SuperPoder1, SuperPoder2;                         // duas cidades (por isso os sufixos 1/2)
+    double area1, pib1, area2, pib2, Dpopulacional1, Dpopulacional2, PIBperC1, PIBperC2, SuperPoder1, SuperPoder2;                         // duas cidades (por isso os sufixos 1/2)
     char nome1[80], nome2[80], estado1[40], codigo1[40], estado2[40], codigo2[40];
     unsigned long int populacao1, populacao2;
     // Cadastro das Cartas:
@@ -35,10 +35,10 @@ int main() {
     scanf("%lu", &populacao1);
 
     printf("Agora insira a Área (KM²) da primeira cidade: \n");
-    scanf("%f", &area1);
+    scanf("%lf", &area1);
 
     printf("Agora insira o PIB da primeira cidade: \n");
-    scanf("%f", &pib1);
+    scanf("%lf", &pib1);
 
     printf("Agora, para finalizar, digite o número de Pontos Turísticos da primeira cidade: \n");
     scanf("%d", &Pturisticos1);
@@ -60,10 +60,10 @@ int main() {
     scanf("%lu", &populacao2);
 
     printf("Agora insira a Área (KM²) da segunda cidade: \n");
-    scanf("%f", &area2);
+    scanf("%lf", &area2);
 
     printf("Agora insira o PIB da segunda cidade: \n");
-    scanf("%f", &pib2);
+    scanf("%lf", &pib2);
 
     printf("Agora, para finalizar, digite o número de Pontos Turísticos da segunda cidade: \n");
     scanf("%d", &Pturisticos2);
@@ -112,7 +112,7 @@ int main() {
     if (Dpopulacional2 > 0.0f){
         inverso_densidade2 = 1.0f / Dpopulacional2;
     }
-    SuperPoder1 = (float)populacao2 + area2 + pib2 + (float)Pturisticos2 + Dpopulacional2 + PIBperC2 + inverso_densidade2;
+    SuperPoder2 = (float)populacao2 + area2 + pib2 + (float)Pturisticos2 + Dpopulacional2 + PIBperC2 + inverso_densidade2;
 
     printf("--------------------------------------------------------- \n \n"); //Deixa a exibição mais legível.
 
@@ -143,26 +143,26 @@ int main() {
 
     printf("Agora vamos comparar e ver qual cidade leva a melhor:\n\n");
 
-    printf("0 = cidade 1 venceu.\n1 = cidade 2 venceu\n\n");
-
     printf("População: %d\n\n", populacao1 > populacao2);
 
-    printf("População: %d\n\n", area1 > area2);
+    printf("Area: %d\n\n", area1 > area2);
 
-    printf("População: %d\n\n", pib1 > pib2);
+    printf("PIB: %d\n\n", pib1 > pib2);
 
-    printf("População: %d\n\n", Pturisticos1 > Pturisticos2);
+    printf("Pontos turisticos: %d\n\n", Pturisticos1 > Pturisticos2);
 
-    printf("População: %d\n\n", Dpopulacional2 > Dpopulacional1);
+    printf("Densidade Populacional: %d\n\n", Dpopulacional1 < Dpopulacional2);
 
-    printf("População: %d\n\n", PIBperC1 > PIBperC2);
+    printf("PIB per Capita: %d\n\n", PIBperC1 > PIBperC2);
+
+    printf("1 = cidade 1 venceu.\n0 = cidade 2 venceu\n\n");
 
     printf("Agora vamos ver qual das duas cidades é a mais poderosa:\n\n");
 
     if (SuperPoder1 > SuperPoder2){
-        printf("Cidade 1 venceu\n\n");
+        printf("1\n\n");
     }else{
-        printf("Cidade 2 venceu\n\n");
+        printf("0\n\n");
     }
 
     return 0;
