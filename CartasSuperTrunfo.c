@@ -27,21 +27,26 @@ int main() {
 
     printf("Agora insira o Código da primeira cidade \n");
     scanf("%s", codigo1);
+    getchar();
 
     printf("Insira o nome da primeira cidade: \n");
     scanf(" %[^\n]", nome1);                    
 
     printf("Agora insira a população da primeira cidade: \n");
     scanf("%lu", &populacao1);
+    getchar();
 
     printf("Agora insira a Área (KM²) da primeira cidade: \n");
     scanf("%lf", &area1);
+    getchar();
 
-    printf("Agora insira o PIB da primeira cidade: \n");
+    printf("Agora insira o PIB da primeira cidade em Bilhões: \n");
     scanf("%lf", &pib1);
+    getchar();
 
     printf("Agora, para finalizar, digite o número de Pontos Turísticos da primeira cidade: \n");
     scanf("%d", &Pturisticos1);
+    getchar();
 
     /*Analise das informações da segunda carta*/
 
@@ -52,21 +57,26 @@ int main() {
 
     printf("Agora insira o Código da segunda cidade: \n");
     scanf("%s", codigo2);
+    getchar();
 
     printf("Agora insira o nome da segunda cidade: \n");
     scanf(" %[^\n]", nome2);
 
     printf("Agora insira a população da segunda cidade: \n");
     scanf("%lu", &populacao2);
+    getchar();
 
     printf("Agora insira a Área (KM²) da segunda cidade: \n");
     scanf("%lf", &area2);
+    getchar();
 
-    printf("Agora insira o PIB da segunda cidade: \n");
+    printf("Agora insira o PIB da segunda cidade em Bilhões: \n");
     scanf("%lf", &pib2);
+    getchar();
 
     printf("Agora, para finalizar, digite o número de Pontos Turísticos da segunda cidade: \n");
     scanf("%d", &Pturisticos2);
+    getchar();
 
     /*Calculo das informações adicionais (Densidade populacional/PIB per Capita.)*/
 
@@ -79,7 +89,7 @@ int main() {
         printf("⚠️ Atenção: Área da Carta 1 é zero! Densidade Populacional definida como 0. \n");
     }
     if (populacao1 > 0) {
-        PIBperC1 = (pib1 * 1000000000.0f) / populacao1;
+        PIBperC1 = (pib1 * 1000000000.0f) / populacao1; // dar uma olhada porque está dando resultados duvidosos(para dizer o mínimo).
     }else{
         PIBperC1 = 0.0f;
         printf("⚠️ Atenção: População da Carta 1 é zero! PIB per Capita definido como 0. \\n");
@@ -102,17 +112,17 @@ int main() {
 
     /*Calculo do super poder*/
 
-    float inverso_densidade1 = 0.0f;
-    if (Dpopulacional1 > 0.0f){
-        inverso_densidade1 = 1.0f / Dpopulacional1;
+    double inverso_densidade1 = 0.0f;
+    if (Dpopulacional1 > 0.0){
+        inverso_densidade1 = 1.0 / Dpopulacional1;
     }
-    SuperPoder1 = (float)populacao1 + area1 + pib1 + (float)Pturisticos1 + Dpopulacional1 + PIBperC1 + inverso_densidade1;
+    SuperPoder1 = (double)populacao1 + area1 + pib1 + (double)Pturisticos1 + Dpopulacional1 + PIBperC1 + inverso_densidade1;
 
-        float inverso_densidade2 = 0.0f;
-    if (Dpopulacional2 > 0.0f){
-        inverso_densidade2 = 1.0f / Dpopulacional2;
+    double inverso_densidade2 = 0.0f;
+    if (Dpopulacional2 > 0.0){
+        inverso_densidade2 = 1.0 / Dpopulacional2;
     }
-    SuperPoder2 = (float)populacao2 + area2 + pib2 + (float)Pturisticos2 + Dpopulacional2 + PIBperC2 + inverso_densidade2;
+    SuperPoder2 = (double)populacao2 + area2 + pib2 + (double)Pturisticos2 + Dpopulacional2 + PIBperC2 + inverso_densidade2;
 
     printf("--------------------------------------------------------- \n \n"); //Deixa a exibição mais legível.
 
@@ -125,7 +135,7 @@ int main() {
     printf("Código: %s \n", codigo1);                                //Exibe o Código da primeira carta.
     printf("Nome da cidade: %s \n", nome1);                   //Exibe o nome definido para a primeira carta.
     printf("Populacão: %lu \n", populacao1);                  //Exibe o número populacional definido para a primeira carta.
-    printf("Área: %f KM² \n", area1);                        //Exibe a área definida para a primeira carta.
+    printf("Área: %.2f KM² \n", area1);                        //Exibe a área definida para a primeira carta.
     printf("PIB: R$ %.2f \n", pib1);                           //Exibe o PIB definido para a primeira carta.
     printf("Pontos Turísticos: %d \n", Pturisticos1);        //Exibe o número de pontos turísticos definido para a primeira carta.
     printf("Densidade Populacional: %.2f hab/KM² \n", Dpopulacional1); //Exibe a Densidade Populacional calculada da primeira carta.
@@ -135,7 +145,7 @@ int main() {
     printf("Código: %s \n", codigo2);                                //Exibe o Código da segunda carta.
     printf("Nome da cidade: %s \n", nome2);                   //Exibe o nome definido para a segunda carta.
     printf("Populacão: %lu \n", populacao2);                  //Exibe o número populacional definido para a segunda carta.
-    printf("Área: %f KM² \n", area2);                         //Exibe a área definida para a segunda carta.
+    printf("Área: %.2f KM² \n", area2);                         //Exibe a área definida para a segunda carta.
     printf("PIB: R$ %.2f \n", pib2);                            //Exibe o PIB definido para a segunda carta.
     printf("Pontos Turísticos: %d \n", Pturisticos2);         //Exibe o número de pontos turísticos definido para a segunda carta.
     printf("Densidade Populacional: %.2f hab/KM² \n", Dpopulacional2); //Exibe a Densidade Populacional calculada da segunda carta.
